@@ -1,0 +1,27 @@
+# gmm-rescore-lattice exp/tri2b_ali/final.mdl "ark:gunzip -c exp/tri2b_denlats/lat.2.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- |" ark:- | lattice-to-mpe-post --acoustic-scale=0.1 exp/tri2b_ali/final.mdl "ark,s,cs:gunzip -c exp/tri2b_ali/ali.2.gz |" ark:- ark:- | gmm-acc-stats2 exp/tri2b_ali/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- |" ark,s,cs:- exp/tri2b_mpe/num_acc.0.2.acc exp/tri2b_mpe/den_acc.0.2.acc 
+# Started at Sat Dec  9 11:39:53 IST 2023
+#
+gmm-acc-stats2 exp/tri2b_ali/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- |' ark,s,cs:- exp/tri2b_mpe/num_acc.0.2.acc exp/tri2b_mpe/den_acc.0.2.acc 
+gmm-rescore-lattice exp/tri2b_ali/final.mdl 'ark:gunzip -c exp/tri2b_denlats/lat.2.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- |' ark:- 
+lattice-to-mpe-post --acoustic-scale=0.1 exp/tri2b_ali/final.mdl 'ark,s,cs:gunzip -c exp/tri2b_ali/ali.2.gz |' ark:- ark:- 
+WARNING (lattice-to-mpe-post[5.5.1074~1-71f3]:main():lattice-to-mpe-post.cc:72) No silence phones specified, make sure this is what you intended.
+apply-cmvn --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2b_ali/final.mat ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2b_ali/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:data/train/split2/2/feats.scp ark:- 
+LOG (apply-cmvn[5.5.1074~1-71f3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 50 utterances, errors on 0
+LOG (apply-cmvn[5.5.1074~1-71f3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 50 utterances, errors on 0
+LOG (gmm-rescore-lattice[5.5.1074~1-71f3]:main():gmm-rescore-lattice.cc:103) Done 50 lattices with errors on 0, #frames is 16436
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -66.2233 over 16436 frames.
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:161) Applied transform to 50 utterances; 0 had errors.
+LOG (lattice-to-mpe-post[5.5.1074~1-71f3]:main():lattice-to-mpe-post.cc:136) Overall average frame-accuracy is 0.980391 over 16436 frames.
+LOG (lattice-to-mpe-post[5.5.1074~1-71f3]:main():lattice-to-mpe-post.cc:139) Done 50 lattices.
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -66.2233 over 16436 frames.
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:161) Applied transform to 50 utterances; 0 had errors.
+LOG (gmm-acc-stats2[5.5.1074~1-71f3]:main():gmm-acc-stats2.cc:130) Done 50 files, 0 had errors.
+LOG (gmm-acc-stats2[5.5.1074~1-71f3]:main():gmm-acc-stats2.cc:133) Overall weighted acoustic likelihood per frame was 0.0385022 over 16436 frames; average weight per frame was -1.95943e-10
+LOG (gmm-acc-stats2[5.5.1074~1-71f3]:main():gmm-acc-stats2.cc:147) Written accs.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Dec  9 11:39:53 IST 2023, elapsed time 0 seconds

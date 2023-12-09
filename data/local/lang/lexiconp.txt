@@ -1,0 +1,12 @@
+!SIL 1.0 sil_S
+<UNK> 1.0 spn_S
+1 1.0 EY_B K_E
+2 1.0 DH_B OW_E
+3 1.0 TH_B IY_I N_E
+4 1.0 CH_B AH_I AH_I R_E
+5 1.0 P_B AH_I AH_I N_I CH_E
+6 1.0 CH_B EY_E
+7 1.0 S_B AH_I AH_I TH_E
+8 1.0 AH_B AH_I T_E
+9 1.0 N_B AW_E
+0 1.0 SH_B UW_I N_I Y_E

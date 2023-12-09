@@ -1,0 +1,12 @@
+!SIL 1.0	sil
+<UNK> 1.0	spn
+1 1.0	EY K
+2 1.0	DH OW
+3 1.0	TH IY N
+4 1.0	CH AH AH R  
+5 1.0	P AH AH N CH
+6 1.0	CH EY
+7 1.0	S AH AH TH
+8 1.0	AH AH T
+9 1.0	N AW
+0 1.0	SH UW N Y

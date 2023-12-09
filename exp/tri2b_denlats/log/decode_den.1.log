@@ -1,0 +1,115 @@
+# gmm-latgen-faster --beam=13.0 --lattice-beam=7.0 --acoustic-scale=0.1 --max-mem=20000000 --max-active=5000 --word-symbol-table=data/lang/words.txt exp/tri2b/final.mdl exp/tri2b_denlats/dengraph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/1/utt2spk scp:data/train/split2/1/cmvn.scp scp:data/train/split2/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |" "ark:|gzip -c >exp/tri2b_denlats/lat.1.gz" 
+# Started at Sat Dec  9 11:39:48 IST 2023
+#
+gmm-latgen-faster --beam=13.0 --lattice-beam=7.0 --acoustic-scale=0.1 --max-mem=20000000 --max-active=5000 --word-symbol-table=data/lang/words.txt exp/tri2b/final.mdl exp/tri2b_denlats/dengraph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split2/1/utt2spk scp:data/train/split2/1/cmvn.scp scp:data/train/split2/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |' 'ark:|gzip -c >exp/tri2b_denlats/lat.1.gz' 
+apply-cmvn --utt2spk=ark:data/train/split2/1/utt2spk scp:data/train/split2/1/cmvn.scp scp:data/train/split2/1/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2b/final.mat ark:- ark:- 
+akarsh_0_4_8 0 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_0_4_8 is -4.34298 over 429 frames.
+akarsh_1_1_7 1 1 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_1_1_7 is -4.10711 over 408 frames.
+akarsh_1_4_6 1 6 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_1_4_6 is -4.15316 over 417 frames.
+akarsh_2_2_7 2 2 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_2_2_7 is -4.1095 over 419 frames.
+akarsh_3_3_8 3 3 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_3_3_8 is -4.07037 over 402 frames.
+akarsh_4_7_0 7 0 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_4_7_0 is -4.28273 over 389 frames.
+akarsh_5_1_7 5 1 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_5_1_7 is -4.18559 over 421 frames.
+akarsh_5_6_4 5 6 4 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_5_6_4 is -4.08477 over 401 frames.
+akarsh_6_5_8 6 5 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_6_5_8 is -4.18116 over 428 frames.
+akarsh_7_0_1 7 0 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance akarsh_7_0_1 is -4.24727 over 435 frames.
+anindita_0_2_8 0 2 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_0_2_8 is -4.9949 over 250 frames.
+anindita_0_8_5 0 8 5 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_0_8_5 is -5.30475 over 265 frames.
+anindita_4_5_1 4 5 1 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_4_5_1 is -5.00922 over 250 frames.
+anindita_4_9_2 4 9 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_4_9_2 is -4.85185 over 245 frames.
+anindita_5_1_7 5 1 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_5_1_7 is -4.95954 over 259 frames.
+anindita_5_9_5 5 9 5 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_5_9_5 is -4.86507 over 244 frames.
+anindita_6_7_8 6 7 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_6_7_8 is -5.34932 over 216 frames.
+anindita_7_1_0 7 1 0 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_7_1_0 is -4.94653 over 277 frames.
+anindita_9_6_9 9 6 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_9_6_9 is -4.7411 over 234 frames.
+anindita_9_9_5 9 9 5 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anindita_9_9_5 is -4.64356 over 238 frames.
+anirudh_0_2_4 0 2 4 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_0_2_4 is -5.1917 over 164 frames.
+anirudh_0_6_7 0 6 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_0_6_7 is -5.60401 over 141 frames.
+anirudh_1_3_9 1 3 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_1_3_9 is -5.06444 over 171 frames.
+anirudh_2_1_7 2 1 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_2_1_7 is -5.23661 over 152 frames.
+anirudh_2_3_5 2 3 5 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_2_3_5 is -5.86261 over 162 frames.
+anirudh_2_9_2 2 9 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_2_9_2 is -5.28823 over 116 frames.
+anirudh_7_8_9 7 8 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_7_8_9 is -4.91311 over 130 frames.
+anirudh_8_4_8 8 4 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_8_4_8 is -5.06091 over 116 frames.
+anirudh_8_7_2 8 7 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_8_7_2 is -5.21223 over 127 frames.
+anirudh_9_8_2 9 8 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance anirudh_9_8_2 is -4.95749 over 133 frames.
+harinie_1_0_7 1 0 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_1_0_7 is -5.232 over 307 frames.
+harinie_2_2_3 2 2 3 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_2_2_3 is -4.99036 over 248 frames.
+harinie_4_4_8 4 4 8 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_4_4_8 is -5.17271 over 231 frames.
+harinie_6_2_1 6 2 1 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_6_2_1 is -5.14769 over 242 frames.
+harinie_6_5_1 6 5 1 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_6_5_1 is -4.99266 over 256 frames.
+harinie_6_8_6 6 8 6 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_6_8_6 is -5.32083 over 270 frames.
+harinie_7_4_3 7 4 3 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_7_4_3 is -5.17975 over 265 frames.
+LOG (apply-cmvn[5.5.1074~1-71f3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 50 utterances, errors on 0
+harinie_7_8_1 7 8 1 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_7_8_1 is -5.26224 over 270 frames.
+harinie_8_4_6 8 4 6 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_8_4_6 is -5.16441 over 262 frames.
+harinie_9_2_1 9 2 1 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance harinie_9_2_1 is -4.77882 over 280 frames.
+manogna_0_6_2 0 6 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_0_6_2 is -5.71494 over 154 frames.
+manogna_2_2_9 2 2 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_2_2_9 is -5.28306 over 154 frames.
+manogna_2_5_3 2 5 3 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_2_5_3 is -6.11135 over 127 frames.
+manogna_3_1_0 3 1 0 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_3_1_0 is -5.67398 over 137 frames.
+manogna_3_1_7 3 1 7 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_3_1_7 is -5.6954 over 156 frames.
+manogna_3_8_3 3 8 3 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_3_8_3 is -5.91452 over 145 frames.
+manogna_4_1_3 4 1 3 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_4_1_3 is -5.79242 over 143 frames.
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -66.2233 over 12110 frames.
+LOG (transform-feats[5.5.1074~1-71f3]:main():transform-feats.cc:161) Applied transform to 50 utterances; 0 had errors.
+manogna_4_9_9 4 9 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_4_9_9 is -5.70075 over 126 frames.
+manogna_5_1_9 5 1 9 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_5_1_9 is -5.87597 over 144 frames.
+manogna_9_0_2 9 0 2 
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance manogna_9_0_2 is -5.59929 over 154 frames.
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:main():gmm-latgen-faster.cc:176) Time taken 0.497968s: real-time factor assuming 100 frames/sec is 0.00411204
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:main():gmm-latgen-faster.cc:179) Done 50 utterances, failed for 0
+LOG (gmm-latgen-faster[5.5.1074~1-71f3]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -4.85428 over 12110 frames.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Sat Dec  9 11:39:49 IST 2023, elapsed time 1 seconds

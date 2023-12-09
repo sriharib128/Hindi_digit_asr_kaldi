@@ -1,0 +1,9 @@
+# gmm-sum-accs exp/tri2b_mmi_b0.05/den_acc.3.acc exp/tri2b_mmi_b0.05/den_acc.3.1.acc exp/tri2b_mmi_b0.05/den_acc.3.2.acc 
+# Started at Sat Dec  9 11:39:52 IST 2023
+#
+gmm-sum-accs exp/tri2b_mmi_b0.05/den_acc.3.acc exp/tri2b_mmi_b0.05/den_acc.3.1.acc exp/tri2b_mmi_b0.05/den_acc.3.2.acc 
+LOG (gmm-sum-accs[5.5.1074~1-71f3]:main():gmm-sum-accs.cc:63) Summed 2 stats, total count 489.536, avg like/frame -36.9488
+LOG (gmm-sum-accs[5.5.1074~1-71f3]:main():gmm-sum-accs.cc:66) Total count of stats is 489.536
+LOG (gmm-sum-accs[5.5.1074~1-71f3]:main():gmm-sum-accs.cc:67) Written stats to exp/tri2b_mmi_b0.05/den_acc.3.acc
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Dec  9 11:39:52 IST 2023, elapsed time 0 seconds
